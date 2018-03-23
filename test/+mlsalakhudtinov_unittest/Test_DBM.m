@@ -41,7 +41,7 @@ classdef Test_DBM < matlab.unittest.TestCase
 		function setupDBM(this)
  			import mlsalakhudtinov.*;
  			this.testObj_ = DBM;
-            this.pwd0 = pushd(fullfile(getenv('LOCAL'), 'src', 'mlcvl', 'mlsalakhudtinov', 'test', '+mlsalakhudtinov_unittest'));
+            this.pwd0 = pushd(fullfile(getenv('HOME'), 'MATLAB-Drive', 'mlsalakhudtinov', 'test', '+mlsalakhudtinov_unittest'));
  			this.addTeardown(@this.cleanFilesystem);
             rng('default');
  		end
