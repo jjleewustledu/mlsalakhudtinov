@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Home Page of Ruslan R Salakhutdinov</title>
+<meta name="Description" content="ruslan salakhutdinov : index">
+<link REL="stylesheet" HREF="class.css" TYPE="text/css">
+</head>
+<body MARGINWIDTH="0" MARGINHEIGHT="0">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=10 WIDTH="100%">
+
+<td class="main">&nbsp;</td>
+<td VALIGN=TOP class="main">
+<br>
+
+<h1>Learning Deep Boltzmann Machines </h1>
+
+
+<h4>
+ Code provided by Ruslan Salakhutdinov 
+<br>
+
+ Permission is granted for anyone to copy, use, modify, or distribute this
+ program and accompanying programs and documents for any purpose, provided
+ this copyright notice is retained and prominently displayed, along with
+ a note saying that the original programs are available from our
+ web page.
+ The programs and documents are distributed without any warranty, express or
+ implied.  As the programs were written for research purposes only, they have
+ not been tested to the degree that would be advisable in any important
+ application.  All use of these programs is entirely at the user's own risk.
+</h4>
+
+<h3>How to make it work:</h3>
+<ol>
+ <li> Create a separate directory and download all these files into the same directory 
+ <li> Download from  <a href="http://yann.lecun.com/exdb/mnist"> http://yann.lecun.com/exdb/mnist </a> 
+      the following 4 files:
+  <ul>
+     <li> train-images-idx3-ubyte.gz 
+     <li> train-labels-idx1-ubyte.gz 
+     <li> t10k-images-idx3-ubyte.gz 
+     <li> t10k-labels-idx1-ubyte.gz 
+  </ul>  
+  <li> Unzip these 4 files by executing: 
+  <ul>
+    <li> gunzip train-images-idx3-ubyte.gz 
+    <li> gunzip train-labels-idx1-ubyte.gz  
+    <li> gunzip t10k-images-idx3-ubyte.gz  
+    <li> gunzip t10k-labels-idx1-ubyte.gz  
+  </ul>  
+If unzipping with WinZip, make sure the file names have not been
+      changed by WinZip.
+
+  <li> Download <a href="code_DBM/code_DBM.tar"> code_DBM.tar </a> which contains 16 files
+ <bf> OR </bf> <br> download
+ each of the following 16 files separately:
+     <ul>
+        <li> <a href="code_DBM/demo_small.m"> demo_small.m </a> Main file for training and fine-tuning a toy DBM model.
+        <li> <a href="code_DBM/demo.m"> demo.m </a>  Main file for training and fine-tuning a DBM model (reproduces results of the DBM paper).
+        <li> <a href="code_DBM/converter.m"> converter.m </a> Converts raw MNIST digits into matlab format.
+        <li> <a href="code_DBM/rbm.m"> rbm.m </a> Training RBM with binary hidden and binary visible units.
+        <li> <a href="code_DBM/rbm_l2.m"> rbm_l2.m </a> Training 2nd layer RBM with binary hidden and visible units.
+        <li> <a href="code_DBM/dbm_mf.m"> dbm_mf.m </a> Joint training of all layers in a DBM.
+        <li> <a href="code_DBM/mf.m"> mf.m </a> Implements mean-field inference.
+        <li> <a href="code_DBM/backprop.m"> backprop.m </a> Backpropagation for fine-tuning a DBM.
+        <li> <a href="code_DBM/mf_class.m"> mf_class.m </a> Helper function used by backprop.m
+        <li> <a href="code_DBM/CG_MNIST.m">  CG_MNIST.m </a> Conjugate Gradient optimization for fine-tuning a DBM.
+        <li> <a href="code_DBM/CG_MNIST_INIT.m"> CG_MNIST_INIT.m </a> Conjugate Gradient optimization for fine-tuning a DBM (training top-level
+            parameters, while holding low-level parameters fixed).
+        <li> <a href="code_DBM/makebatches.m"> makebatches.m </a> Creates minibatches for DBM training.
+        <li> <a href="code_DBM/testerr.m"> testerr.m </a> Computes misclassification error on the MNIST dataset.
+         <li> <a href="code_DBM/dispims.m"> dispims.m </a> Displays progress during DBM training.
+        <li> <a href="code_DBM/minimize.m"> minimize.m </a> Conjugate gradient code.
+        <li> <a href="code_DBM/README.txt"> README.txt </a>
+     </ul>
+     <li> For the toy experiment, run demo_small in matlab.
+     <li> Run demo in Matlab. This is a long version of training a Deep Boltzmann Machine, which
+          can take over 2 days. The code also uses sparsity to improve model performance.
+     <li> Make sure you have enough space to
+          store the entire MNIST dataset on your disk.
+</ol>
+
+<h3>I did not try to optimize this code, but if you find bugs, please e-mail me. <h3>
+<br>
+
+
+
+<h3>Contact Information</h3>
+<b>
+Ruslan Salakhutdinov</b> <br> <a href="http://www.utstat.toronto.edu">Department
+ of Statistics</a>,
+ University of Toronto,
+<br> <a href="http://www.utstat.toronto.edu/~rsalakhu/">
+http://www.utstat.toronto.edu/~rsalakhu
+</a>
+<br>
+<b>Email</b>: rsalakhu [at] utstat [dot] toronto [dot] edu<br>
+<p>
+<br>
+<br>
+<br>
+
+</html>
